@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 2 – Healthy Living | A Closer Look 1</title>
+<style>
+:root{--green:#178a68;--green2:#e9f8f2;--orange:#f5a623;--ink:#17352c;--muted:#60746e;--red:#c43d3d;--ok:#167447;--card:#fff}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,sans-serif;background:#f4faf7;color:var(--ink)}
+header{background:linear-gradient(135deg,#167d61,#21a27b);color:#fff;padding:30px 18px;text-align:center}
+header h1{margin:0;font-size:clamp(26px,5vw,42px)} header h2{margin:8px 0 3px;font-size:clamp(18px,3vw,25px)}
+header p{margin:5px 0 0}.wrap{max-width:1000px;margin:auto;padding:18px}
+.student{background:#fff;padding:15px;border-radius:14px;margin-top:-10px;box-shadow:0 4px 18px #0001;display:flex;gap:12px;flex-wrap:wrap}
+.student label{flex:1;min-width:220px;font-weight:700}.student input{width:100%;padding:10px;border:1px solid #b9cec6;border-radius:8px;margin-top:5px;font-size:16px}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}.tabs button,.action{border:0;border-radius:12px;padding:13px 14px;font-weight:800;cursor:pointer;font-size:15px}
+.tabs button{background:#fff;color:var(--green);border:2px solid #cde8de}.tabs button.active{background:var(--green);color:#fff;border-color:var(--green)}
+.panel{display:none}.panel.active{display:block}.headbox{display:flex;justify-content:space-between;align-items:center;gap:12px;background:#fff;padding:14px 16px;border-radius:14px;margin-bottom:12px}
+.progress{font-weight:800;color:var(--green)}.bar{height:8px;background:#dfece7;border-radius:9px;overflow:hidden;margin-top:7px}.fill{height:100%;background:var(--green);width:0}
+.qcard{background:var(--card);border-radius:14px;padding:18px;margin:12px 0;box-shadow:0 2px 10px #0000000d;border-left:5px solid #9fd8c6}
+.qtitle{font-size:18px;font-weight:800;line-height:1.45;margin-bottom:12px}.option{display:block;border:1px solid #d6e4df;padding:11px 12px;margin:8px 0;border-radius:10px;cursor:pointer}
+.option:hover{background:#f0faf6}.option input{margin-right:9px}.resultline{display:none;margin-top:12px;padding:11px;border-radius:9px;line-height:1.45}
+.resultline.good{display:block;background:#e8f7ee;color:#145d3b}.resultline.bad{display:block;background:#fff0f0;color:#8c2929}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}.submit{background:var(--green);color:white}.reset{background:#fff;color:var(--green);border:2px solid var(--green)}
+.scorebox{display:none;background:#fff8e8;border:2px solid #f2c363;border-radius:14px;padding:18px;margin:16px 0;text-align:center;font-size:19px;font-weight:800}
+.total{background:#17352c;color:white;padding:20px;border-radius:15px;text-align:center;margin:22px 0;display:none}.note{color:var(--muted);font-size:14px}
+@media(max-width:700px){.tabs{grid-template-columns:1fr}.headbox{align-items:flex-start;flex-direction:column}.wrap{padding:12px}.qcard{padding:15px}}
+</style>
+</head>
+<body>
+<header>
+<h1>UNIT 2 – HEALTHY LIVING</h1>
+<h2>LESSON 2: A CLOSER LOOK 1</h2>
+<p>PRACTICE &amp; APPLY • 30 QUESTIONS</p>
+</header>
+<div class="wrap">
+<div class="student">
+<label>Họ và tên
+<select id="name" style="width:100%;padding:10px;border:1px solid #b9cec6;border-radius:8px;margin-top:5px;font-size:16px;background:white">
+<option value="">-- Chọn họ và tên --</option><option value="Bùi Tâm An">Bùi Tâm An</option><option value="Nguyễn Quang Anh">Nguyễn Quang Anh</option><option value="Tô Thị Bảo Anh">Tô Thị Bảo Anh</option><option value="Trần Bảo Anh">Trần Bảo Anh</option><option value="Trần Minh Anh">Trần Minh Anh</option><option value="Vũ Nguyễn Diệu Anh">Vũ Nguyễn Diệu Anh</option><option value="Đồng Thái Bảo">Đồng Thái Bảo</option><option value="Vũ Đức Doanh">Vũ Đức Doanh</option><option value="Đào Trung Dũng">Đào Trung Dũng</option><option value="Trần Văn Dũng">Trần Văn Dũng</option><option value="Nguyễn Minh Đức">Nguyễn Minh Đức</option><option value="Trần Minh Hà">Trần Minh Hà</option><option value="Trần Phước Hải">Trần Phước Hải</option><option value="Nguyễn Đức Huy">Nguyễn Đức Huy</option><option value="Trần Việt Huy">Trần Việt Huy</option><option value="Vũ Đức Gia Hưng">Vũ Đức Gia Hưng</option><option value="Cao Ngân Khánh">Cao Ngân Khánh</option><option value="Nguyễn Tùng Lâm">Nguyễn Tùng Lâm</option><option value="Nguyễn Đức Gia Minh">Nguyễn Đức Gia Minh</option><option value="Phạm Bình Minh">Phạm Bình Minh</option><option value="Vũ Hải Nam">Vũ Hải Nam</option><option value="Đào Thanh Ngân">Đào Thanh Ngân</option><option value="Nguyễn Thị Kim Ngân">Nguyễn Thị Kim Ngân</option><option value="Đỗ Duy Nghĩa">Đỗ Duy Nghĩa</option><option value="Trần Thảo Nguyên">Trần Thảo Nguyên</option><option value="Đào Minh Phương">Đào Minh Phương</option><option value="Đào Thị Phương Thảo">Đào Thị Phương Thảo</option><option value="Phạm Phương Thảo">Phạm Phương Thảo</option><option value="Trần Thị Ngọc Tiên">Trần Thị Ngọc Tiên</option><option value="Nguyễn Tuấn Tú">Nguyễn Tuấn Tú</option><option value="Vũ Đức Tuấn Tú">Vũ Đức Tuấn Tú</option><option value="Nguyễn Công Vinh">Nguyễn Công Vinh</option><option value="Bùi Dương Hải Vy">Bùi Dương Hải Vy</option><option value="Đinh Thị Hoàng Yến">Đinh Thị Hoàng Yến</option>
+</select>
+</label>
+<label>Lớp
+<input id="className" value="7G" readonly style="background:#eef5f2;font-weight:700">
+</label>
+</div>
+<div class="tabs">
+<button class="tab active" data-ex="ex1">EXERCISE 1<br>VOCABULARY</button>
+<button class="tab" data-ex="ex2">EXERCISE 2<br>HEALTHY OR UNHEALTHY?</button>
+<button class="tab" data-ex="ex3">EXERCISE 3<br>PRONUNCIATION & APPLICATION</button>
+</div>
+<div id="panels"></div>
+<div id="total" class="total"></div>
+<div id="sendArea" style="display:none;background:#fff;padding:20px;border-radius:15px;box-shadow:0 2px 10px #0001;margin:20px 0;text-align:center">
+<h3 style="margin-top:0">HOÀN THÀNH BÀI TẬP</h3>
+<p>Chọn đúng Họ và tên của em trước khi nộp. Mỗi học sinh chỉ được ghi nhận kết quả lần đầu tiên.</p>
+<button id="sendBtn" class="action submit" onclick="sendResult()">NỘP KẾT QUẢ CHO CÔ</button>
+<div id="sendStatus" style="margin-top:12px;font-weight:700"></div>
+</div>
+<p class="note">Answers and explanations appear only after you submit each exercise.</p>
+</div>
+<script>
+const qs = [{"ex": "ex1", "q": "Mai's lips are dry and painful in cold weather. She has ______.", "opts": ["sunburn", "chapped lips", "dim light", "soft drinks"], "ans": 1, "exp": "“Chapped lips” là tình trạng môi khô, nứt và đau."}, {"ex": "ex1", "q": "After spending too much time in the strong sun, Nam's skin becomes red and painful. He has ______.", "opts": ["sunburn", "lip balm", "coloured vegetables", "dim light"], "ans": 0, "exp": "“Sunburn” là tình trạng da bị cháy nắng do ở ngoài nắng quá lâu."}, {"ex": "ex1", "q": "Lan uses ______ to protect her dry lips.", "opts": ["soft drinks", "red spots", "lip balm", "dim light"], "ans": 2, "exp": "“Lip balm” là son dưỡng môi, giúp bảo vệ môi khô hoặc nứt."}, {"ex": "ex1", "q": "Carrots, tomatoes and peppers are examples of ______.", "opts": ["skin conditions", "coloured vegetables", "soft drinks", "red spots"], "ans": 1, "exp": "Cà rốt, cà chua và ớt là những loại rau củ có màu sắc – “coloured vegetables”."}, {"ex": "ex1", "q": "Reading for a long time in ______ may be bad for your eyes.", "opts": ["lip balm", "sunburn", "dim light", "fit"], "ans": 2, "exp": "“Dim light” nghĩa là ánh sáng yếu; đọc lâu trong ánh sáng yếu không tốt cho mắt."}, {"ex": "ex1", "q": "Acne is a common ______ among teenagers.", "opts": ["skin condition", "soft drink", "lip balm", "outdoor activity"], "ans": 0, "exp": "“Skin condition” chỉ tình trạng/vấn đề về da; acne là một tình trạng da thường gặp."}, {"ex": "ex1", "q": "Too many ______ are not good for your health because they often contain a lot of sugar.", "opts": ["coloured vegetables", "soft drinks", "outdoor activities", "vitamins"], "ans": 1, "exp": "“Soft drinks” thường chứa nhiều đường nên không nên uống quá nhiều."}, {"ex": "ex1", "q": "Regular exercise can help you stay ______.", "opts": ["dim", "fit", "chapped", "red"], "ans": 1, "exp": "“Fit” nghĩa là khỏe mạnh, cân đối; tập thể dục thường xuyên giúp cơ thể khỏe mạnh."}, {"ex": "ex1", "q": "Minh notices some small ______ on his face.", "opts": ["red spots", "soft drinks", "lip balms", "dim lights"], "ans": 0, "exp": "“Red spots” là những nốt/đốm đỏ trên da."}, {"ex": "ex1", "q": "Which item is most useful when your lips become dry and chapped?", "opts": ["A bottle of soft drink", "Lip balm", "A reading lamp with dim light", "A coloured vegetable"], "ans": 1, "exp": "Son dưỡng môi (lip balm) phù hợp để chăm sóc môi khô, nứt."}, {"ex": "ex2", "q": "Hoa eats fruit and coloured vegetables every day. Which description is best?", "opts": ["Healthy", "Unhealthy"], "ans": 0, "exp": "Ăn hoa quả và rau củ có màu sắc là một thói quen có lợi cho sức khỏe."}, {"ex": "ex2", "q": "Long often reads comics in dim light. What is the better habit?", "opts": ["Keep the room dark", "Read with enough light", "Drink a soft drink while reading", "Touch his face often"], "ans": 1, "exp": "Đọc với đủ ánh sáng là lựa chọn tốt hơn cho mắt."}, {"ex": "ex2", "q": "Which habit should you avoid to help protect your skin?", "opts": ["Washing your hands often", "Eating vegetables", "Touching your face with dirty hands", "Doing outdoor activities"], "ans": 2, "exp": "Chạm tay bẩn lên mặt có thể không tốt cho da; nên giữ tay sạch."}, {"ex": "ex2", "q": "Mai wants to keep fit. Which choice is the most suitable?", "opts": ["Be active and exercise regularly", "Drink more soft drinks", "Read in dim light", "Stay indoors all day"], "ans": 0, "exp": "Vận động và tập thể dục thường xuyên giúp cơ thể khỏe mạnh và cân đối."}, {"ex": "ex2", "q": "Which is the healthier drink choice for every day?", "opts": ["Water", "A sugary soft drink", "Two cans of soft drink", "More fizzy drinks"], "ans": 0, "exp": "Nước là lựa chọn phù hợp hơn để uống hằng ngày so với đồ uống có nhiều đường."}, {"ex": "ex2", "q": "An is going outside at noon on a very sunny day. What should she do to help avoid sunburn?", "opts": ["Stay in strong sunlight for a long time", "Protect herself from strong sunlight", "Read in dim light", "Drink more soft drinks"], "ans": 1, "exp": "Cần bảo vệ cơ thể khỏi ánh nắng mạnh để giảm nguy cơ cháy nắng."}, {"ex": "ex2", "q": "Which routine is best for keeping your teeth healthy?", "opts": ["Brush your teeth twice a day", "Brush only once a week", "Drink soft drinks before bed", "Never clean your teeth"], "ans": 0, "exp": "Đánh răng hai lần mỗi ngày là một thói quen lành mạnh."}, {"ex": "ex2", "q": "After playing outside, Tom's hands are dirty. What should he do before eating?", "opts": ["Touch his face", "Wash his hands", "Drink a soft drink", "Read in dim light"], "ans": 1, "exp": "Rửa tay trước khi ăn là thói quen vệ sinh tốt."}, {"ex": "ex2", "q": "Which student has the least healthy habit?", "opts": ["Linh eats coloured vegetables.", "Nam exercises regularly.", "Mai drinks several soft drinks every day.", "Phong washes his hands often."], "ans": 2, "exp": "Uống nhiều nước ngọt mỗi ngày là thói quen kém lành mạnh hơn các lựa chọn còn lại."}, {"ex": "ex2", "q": "Vy wants to change one unhealthy habit. Which plan is best?", "opts": ["Replace some soft drinks with water", "Read more in dim light", "Touch her face with dirty hands", "Stop eating vegetables"], "ans": 0, "exp": "Thay một phần nước ngọt bằng nước lọc là thay đổi theo hướng lành mạnh hơn."}, {"ex": "ex3", "q": "Choose the word in which the letter “f” is pronounced /f/.", "opts": ["fit", "very", "avoid", "vitamin"], "ans": 0, "exp": "Trong “fit”, chữ f được phát âm là /f/."}, {"ex": "ex3", "q": "Choose the word in which the letter “v” is pronounced /v/.", "opts": ["food", "fit", "favourite", "very"], "ans": 3, "exp": "Trong “very”, chữ v được phát âm là /v/."}, {"ex": "ex3", "q": "Which word begins with the /f/ sound?", "opts": ["vitamin", "favourite", "very", "avoid"], "ans": 1, "exp": "“Favourite” bắt đầu bằng âm /f/."}, {"ex": "ex3", "q": "Which word contains the /v/ sound?", "opts": ["breakfast", "food", "activity", "fit"], "ans": 2, "exp": "Trong “activity”, chữ v được phát âm là /v/."}, {"ex": "ex3", "q": "Choose the word whose first sound is different from the others.", "opts": ["food", "fit", "favourite", "vitamin"], "ans": 3, "exp": "“Food”, “fit”, “favourite” bắt đầu bằng /f/; “vitamin” bắt đầu bằng /v/."}, {"ex": "ex3", "q": "Lan has chapped lips after several cold days. What is the most suitable thing for her to use?", "opts": ["Lip balm", "A soft drink", "Dim light", "A coloured vegetable"], "ans": 0, "exp": "Lip balm là vật phù hợp để chăm sóc môi khô, nứt."}, {"ex": "ex3", "q": "Minh wants to be healthier, but he drinks three cans of soft drinks every day. What is the best change?", "opts": ["Drink more soft drinks", "Replace some soft drinks with water", "Stop doing exercise", "Read in dim light"], "ans": 1, "exp": "Giảm nước ngọt và thay bằng nước lọc là lựa chọn lành mạnh hơn."}, {"ex": "ex3", "q": "Hoa spends a long time outdoors at noon and often gets sunburn. What should she change?", "opts": ["Protect herself from strong sunlight", "Stay outside longer", "Touch her face with dirty hands", "Drink more fizzy drinks"], "ans": 0, "exp": "Bảo vệ cơ thể khỏi ánh nắng mạnh giúp hạn chế cháy nắng."}, {"ex": "ex3", "q": "Peter wants to keep fit. He can choose only one activity after school. Which is best?", "opts": ["Exercise outdoors", "Sit for hours with soft drinks", "Read in dim light", "Avoid all physical activity"], "ans": 0, "exp": "Hoạt động thể chất giúp duy trì thể lực và giữ cơ thể khỏe mạnh."}, {"ex": "ex3", "q": "Mai has red spots on her face and often touches her face without washing her hands. Which habit should she change first?", "opts": ["Eat coloured vegetables", "Wash her hands and avoid touching her face with dirty hands", "Use dim light", "Drink more soft drinks"], "ans": 1, "exp": "Giữ tay sạch và tránh chạm tay bẩn lên mặt là thói quen vệ sinh phù hợp."}];
+const titles={
+ ex1:"EXERCISE 1 – VOCABULARY",
+ ex2:"EXERCISE 2 – HEALTHY OR UNHEALTHY?",
+ ex3:"EXERCISE 3 – PRONUNCIATION & APPLICATION"
+};
+const scores={}; const submitted={};
+const panels=document.getElementById('panels');
+['ex1','ex2','ex3'].forEach((ex,ei)=>{
+ const items=qs.filter(x=>x.ex===ex);
+ const p=document.createElement('section'); p.id=ex; p.className='panel'+(ei===0?' active':'');
+ p.innerHTML=`<div class="headbox"><div><b>${titles[ex]}</b><div class="bar"><div class="fill" id="fill-${ex}"></div></div></div><div class="progress" id="prog-${ex}">Answered: 0 / 10</div></div>
+ <div class="scorebox" id="score-${ex}"></div><div id="items-${ex}"></div>
+ <div class="actions"><button class="action submit" onclick="submitEx('${ex}')">SUBMIT</button><button class="action reset" onclick="resetEx('${ex}')">TRY AGAIN</button></div>`;
+ panels.appendChild(p);
+ const holder=p.querySelector(`#items-${ex}`);
+ items.forEach((item,i)=>{
+   const globalIndex=qs.indexOf(item);
+   const card=document.createElement('div'); card.className='qcard'; card.dataset.idx=globalIndex;
+   card.innerHTML=`<div class="qtitle">${i+1}. ${item.q}</div>`+
+    item.opts.map((o,j)=>`<label class="option"><input type="radio" name="q${globalIndex}" value="${j}"> ${String.fromCharCode(65+j)}. ${o}</label>`).join('')+
+    `<div class="resultline" id="r${globalIndex}"></div>`;
+   holder.appendChild(card);
+ });
+ p.addEventListener('change',()=>updateProgress(ex));
+});
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+ document.querySelectorAll('.panel').forEach(x=>x.classList.remove('active'));
+ b.classList.add('active'); document.getElementById(b.dataset.ex).classList.add('active');
+ window.scrollTo({top:document.querySelector('.tabs').offsetTop-10,behavior:'smooth'});
+});
+function updateProgress(ex){
+ const cards=[...document.querySelectorAll(`#${ex} .qcard`)];
+ const n=cards.filter(c=>c.querySelector('input:checked')).length;
+ document.getElementById(`prog-${ex}`).textContent=`Answered: ${n} / 10`;
+ document.getElementById(`fill-${ex}`).style.width=(n*10)+'%';
+}
+function submitEx(ex){
+ const cards=[...document.querySelectorAll(`#${ex} .qcard`)];
+ if(cards.some(c=>!c.querySelector('input:checked'))){alert('Please answer all questions before submitting.');return;}
+ let score=0;
+ cards.forEach(c=>{
+   const idx=+c.dataset.idx, item=qs[idx], chosen=+c.querySelector('input:checked').value;
+   const r=document.getElementById('r'+idx);
+   if(chosen===item.ans){score++;r.className='resultline good';r.innerHTML=`✓ Correct!<br><span>${item.exp}</span>`;}
+   else{r.className='resultline bad';r.innerHTML=`✗ Not quite.<br>Đáp án đúng: <b>${String.fromCharCode(65+item.ans)}. ${item.opts[item.ans]}</b><br>${item.exp}`;}
+   c.querySelectorAll('input').forEach(x=>x.disabled=true);
+ });
+ scores[ex]=score; submitted[ex]=true;
+ const msg=score>=9?'Excellent! 🌟':score>=7?'Good job! 👍':'Keep practising! 💪';
+ const box=document.getElementById(`score-${ex}`); box.style.display='block'; box.innerHTML=`Score: ${score} / 10 &nbsp; • &nbsp; ${msg}`;
+ box.scrollIntoView({behavior:'smooth',block:'center'}); updateTotal();
+}
+function resetEx(ex){
+ const p=document.getElementById(ex);
+ p.querySelectorAll('input').forEach(x=>{x.checked=false;x.disabled=false});
+ p.querySelectorAll('.resultline').forEach(x=>{x.style.display='';x.className='resultline';x.innerHTML=''});
+ document.getElementById(`score-${ex}`).style.display='none';
+ delete scores[ex]; delete submitted[ex]; updateProgress(ex); updateTotal();
+}
+function updateTotal(){
+ const t=document.getElementById('total');
+ if(Object.keys(submitted).length===3){
+   const s=(scores.ex1||0)+(scores.ex2||0)+(scores.ex3||0);
+   const msg=s>=27?'Excellent! 🌟':s>=23?'Very good! 👏':s>=18?'Good job! 👍':"Keep practising! 💪";
+   t.style.display='block'; t.innerHTML=`TOTAL SCORE: ${s} / 30<br><span style="font-size:17px">${msg}</span>`;
+   document.getElementById('sendArea').style.display='block';
+ } else {
+   t.style.display='none';
+   document.getElementById('sendArea').style.display='none';
+ }
+}
+
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbzriZizVt3dMCtt8B4Mnbwp79X8kE6nRzRkOz9r4o97003lkhbsoWn52nJagT7Hx-ExNw/exec";
+let resultSent = false;
+async function sendResult(){
+  if(resultSent) return;
+  const name=document.getElementById('name').value.trim();
+  const className=document.getElementById('className').value.trim();
+  const status=document.getElementById('sendStatus');
+  const btn=document.getElementById('sendBtn');
+  if(!name || !className){
+    alert('Please enter your full name and class before submitting.');
+    document.querySelector('.student').scrollIntoView({behavior:'smooth'});
+    return;
+  }
+  if(Object.keys(submitted).length!==3){
+    alert('Please complete all three exercises first.');
+    return;
+  }
+  const payload={name:name,className:className,score1:scores.ex1,score2:scores.ex2,score3:scores.ex3,total:(scores.ex1||0)+(scores.ex2||0)+(scores.ex3||0)};
+  btn.disabled=true; btn.textContent='ĐANG GỬI...';
+  status.textContent='Đang gửi kết quả, vui lòng chờ...';
+  try{
+    await fetch(WEB_APP_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(payload)});
+    resultSent=true;
+    status.innerHTML='✓ YÊU CẦU NỘP BÀI ĐÃ ĐƯỢC GỬI. Hệ thống chỉ ghi nhận lần nộp đầu tiên.';
+    status.style.color='#167447';
+    btn.textContent='ĐÃ NỘP BÀI';
+    document.getElementById('name').disabled=true;
+    document.getElementById('className').disabled=true;
+  }catch(err){
+    status.textContent='Chưa gửi được kết quả. Hãy kiểm tra Internet và thử lại.';
+    status.style.color='#c43d3d';
+    btn.disabled=false; btn.textContent='NỘP KẾT QUẢ CHO CÔ';
+  }
+}
+
+</script>
+</body>
+</html>
